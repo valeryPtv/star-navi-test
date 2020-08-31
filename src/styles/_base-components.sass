@@ -1,0 +1,62 @@
+@mixin base-control
+  flex: 1 1 0
+  padding: 12px
+  margin: 10px
+  border-radius: 4px
+  outline: none
+  border: none
+  background-color: $bg-primary
+  color: $text-primary
+  font-size: 1rem
+  cursor: pointer
+  &:focus
+    border: 2px solid $text-secondary
+    padding: 10px
+
+.base-input
+  @include base-control
+  background-color: #E3E3E3
+  min-width: 160px
+  max-width: 40%
+
+.play-btn
+  @include base-control
+  max-width: 120px
+  background-color: $bg-secondary
+  color: #FFF
+  text-transform: uppercase
+
+.base-select
+  @include base-control
+  position: relative
+  width: 130px
+
+  &__header
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__status-icon
+    width: 16px
+    height: 16px
+
+  &__options-list
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    background: $bg-primary
+    border-radius: 4px
+    &--active
+      display: inline-block
+
+  &__option
+    padding: 8px 15px
+    color: $text-secondary
+    font-size: .8rem
+    &--choosen
+      background: #777777
+      color: azure
+    &:hover
+      background: #A0A0A0

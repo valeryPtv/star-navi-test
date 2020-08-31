@@ -1,0 +1,103 @@
+.game-container
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  width: 100%
+  margin: 0 auto
+  //border: 1px solid $bg-primary
+  @media screen and (min-width: 576px)
+    width: 540px
+  @media screen and (min-width: 768px)
+    flex-direction: row
+    width: 720px
+  @media screen and (min-width: 992px)
+    width: 960px
+  @media screen and (min-width: 1200px)
+    width: 1140px
+
+
+.game__area, .score__area
+  flex: 1 1 0
+  padding-top: 100px
+
+.game
+  &__area
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-left: 10px
+    padding-right: 10px
+    @media screen and (min-width: 768px)
+      border-right: 1px solid $bg-primary
+
+  &__controls
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-bottom: 70px
+    @media screen and (min-width: 992px)
+      flex-wrap: nowrap
+
+  &__validation-message
+    position: absolute
+    top: -35px
+    left: 20px
+    text-align: center
+    color: red
+
+  &__messages
+    position: absolute
+    bottom: -70px
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    color: $text-primary
+    font-weight: bold
+    font-size: 1.3rem
+    margin-bottom: 30px
+
+  &__field
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+    width: 60%
+
+  &__field-row
+    display: flex
+    justify-content: center
+    //flex: 1 1 auto
+
+  &__field-square
+    //width: 50px
+    //height: 50px
+    //flex: 1 1 auto
+    border: 1px solid $bg-primary
+    margin: 0 -1px -1px 0
+    &--red
+      background-color: #E85A5F
+    &--green
+      background-color: #6CE773
+    &--blue
+      background-color: #4AD8E8
+
+.score__area
+  padding-left: 40px
+  padding-right: 40px
+
+.leader-board
+  &__title
+    color: $text-primary
+    /* font-weight: bold; */
+    font-size: 1.8rem
+    margin-bottom: 24px
+  &__item
+    display: flex
+    justify-content: space-between
+    background-color: $bg-primary
+    margin-bottom: 3px
+    padding: 16px
+    font-size: 1.1rem
+    color: $text-primary
